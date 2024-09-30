@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansaf Nagori - DevOps Engineer</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="https://github.com/kenichi-07" target="_blank">Projects</a></li>
+            <li><a href="https://www.linkedin.com/in/nagoriansaf/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/4nsaf/" target="_blank">Instagram</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Hi, I'm Ansaf Nagori</h1>
+            <!-- Add Profile Picture -->
+            <div class="profile-picture-container">
+                <img src="{% static 'portfolio/profile.jpg' %}" alt="Profile Picture" class="profile-picture">
+            </div>
+            <h2>DevOps Engineer</h2>
+            <p>Cloud Infrastructure | CI/CD | Automation</p>
+            <p>
+                I’m a DevOps Engineer with a passion for automating workflows and creating efficient systems. Outside of work, I love to play soccer, chess, travel to new places, click pictures, meet new people, and socialize.
+            </p>
+        </div>
+    </header>
+
+    <!-- Work Experience Section -->
+    <section id="experience">
+        <div class="section-box">
+            <h2>Work Experience</h2>
+
+            <div class="work-item">
+                <h3>Genpact via Sapientia Cloud Solutions LLP</h3>
+                <p><b>DevOps Engineer</b> (Mar’22 - Jan’23)</p>
+                <ul>
+                    <li>Managed cloud infrastructure and CI/CD pipelines for pharmaceutical clients, ensuring security and adherence to SLAs with a 100% success rate.</li>
+                    <li>Reduced storage costs by 70% and time spent on log management by 95% through automation of Kibana logs deletion using AWS Lambda, Python, and AWS SDK (Boto3).</li>
+                    <li>Automated scalable infrastructure deployments using AWS CloudFormation, Jenkins, and GitLab for cloud services such as RDS, S3, DynamoDB, and OpenSearch, reducing manual workload by 90%.</li>
+                    <li>Enhanced cloud security and deployment efficiency through implementation of best CI/CD practices in a multi-environment architecture.</li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <h3>DXC Technology</h3>
+                <p><b>Software Engineer</b> (Jun’20 - Mar’22)</p>
+                <ul>
+                    <li>Spearheaded a 30% reduction in data processing time for a Nestlé project by optimizing ETL pipelines with Apache Spark’s in-memory processing.</li>
+                    <li>Automated IAM and MariaDB access management using Terraform and Azure SDKs, achieving 95% time efficiency and enhancing compliance with security standards.</li>
+                    <li>Accelerated delivery of data analytics solutions for P&G, increasing project speed by 20-30% by leveraging PySpark on Azure Databricks within Agile frameworks.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-box">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <!-- Left column -->
+                <div class="skill">
+                    <p>TERRAFORM <span class="percentage">90%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>PYTHON & SHELL SCRIPTING <span class="percentage">70%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>DOCKER <span class="percentage">85%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 85%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>JENKINS <span class="percentage">70%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>ANSIBLE <span class="percentage">80%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+            
+                <!-- Right column -->
+                <div class="skill">
+                    <p>AWS SERVICES <span class="percentage">80%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>POSTGRESQL, MYSQL, MONGO <span class="percentage">75%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>KUBERNETES <span class="percentage">70%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>INFRASTRUCTURE AS CODE (IaC) - CLOUDFORMATION <span class="percentage">90%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>MONITORING & LOGGING: ELK STACK, PROMETHEUS <span class="percentage">80%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>DATABASE MANAGEMENT: MYSQL, MARIADB <span class="percentage">85%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 85%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>AI/ML TOOLS: TENSORFLOW, PYTORCH <span class="percentage">75%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+            
+                <div class="skill">
+                    <p>DEVOPS TOOLS: JIRA, MAVEN <span class="percentage">70%</span></p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ansaf Nagori</p>
+        </div>
+    </footer>
+</body>
+</html>

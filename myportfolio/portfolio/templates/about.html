@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <section id="about">
+        <p>I'm a passionate cloud architect with experience in DevOps, automation, and CI/CD.</p>
+        <p>Skilled in AWS, GCP, and Kubernetes.</p>
+        <p>Currently pursuing a Master's in Computer Science at IIT Chicago.</p>
+    </section>
+    <footer>
+        <a href="{% url 'home' %}">Work</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </footer>
+</body>
+</html>
