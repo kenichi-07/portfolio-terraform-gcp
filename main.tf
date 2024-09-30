@@ -11,7 +11,7 @@ resource "google_compute_network" "vpc_network" {
 
 # Firewall
 resource "google_compute_firewall" "default-allow-ssh" {
-  name    = "allow-ssh"
+  name    = "portfolio-allow-ssh"
   network = google_compute_network.vpc_network.name
 
   allow {
@@ -30,7 +30,7 @@ resource "google_compute_instance" "portfolio-instance" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-10"
+      image = "debian-cloud/debian-11"
     }
   }
 

@@ -1,4 +1,5 @@
-.terraform/
+./terraform/
+./myportfolioenv/
 *.log        # Ignore all log files
 *.tfstate    # Ignore Terraform state files
 *.tfstate.backup
@@ -9,4 +10,20 @@ git rm -r --cached *.log
 git rm -r --cached *.tfstate
 git rm -r --cached .DS_Store
 git rm -r --cached .env
-.terraform/
+
+./myportfolioenv/.DS_Store
+./myportfolioenv/lib/.DS_Store
+./myportfolioenv/lib/python3.11/.DS_Store
+./myportfolioenv/lib/python3.11/site-packages/.DS_Store
+./myportfolioenv/lib/python3.11/site-packages/django/.DS_Store
+./.DS_Store
+./.gitignore
+./.gitattributes
+./myportfolio/.DS_Store
+./myportfolio/portfolio/.DS_Store
+./myportfolio/portfolio/static/.DS_Store
+./myportfolio/portfolio/static/portfolio/.DS_Store
+./myportfolio/myportfolio/.DS_Store
+./.git/.DS_Store
+./.terraform.lock.hcl
+.terraform/providers/registry.terraform.io/hashicorp/google/6.4.0/darwin_arm64/terraform-provider-google_v6.4.0_x5
