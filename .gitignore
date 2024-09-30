@@ -1,0 +1,11 @@
+.terraform/
+*.log        # Ignore all log files
+*.tfstate    # Ignore Terraform state files
+*.tfstate.backup
+.DS_Store    # Ignore macOS system file
+.env         # Ignore environment files if needed
+git rm -r --cached .terraform
+git rm -r --cached *.log
+git rm -r --cached *.tfstate
+git rm -r --cached .DS_Store
+git rm -r --cached .env
