@@ -9,3 +9,4 @@ git rm -r --cached *.log
 git rm -r --cached *.tfstate
 git rm -r --cached .DS_Store
 git rm -r --cached .env
+.terraform/
