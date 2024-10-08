@@ -1,51 +1,79 @@
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 10px;
-    padding: 10px;
-    background: url("{% static 'portfolio/bg1.jpg' %}");
-    background-size: cover;
-    color: #333;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #00FF00;
+    overflow-y: auto;
+}
+
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents canvas from blocking user interactions */
+}
+
+header, section, footer {
+    position: relative;
+    z-index: 2; /* Content appears above the canvas */
 }
 
 header {
-    background: url("{% static 'portfolio/bg1.jpg' %}") no-repeat center center;
-    background-color: cover;
-    color: black;
-    padding: 40px 0;
+    color: #00FF00;
     text-align: center;
-    border-radius: 10px;
-    max-width: 1100px;
-    margin: 20px auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 50px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
 }
 
 header h1 {
     font-size: 3rem;
-    color: #020323;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgba(0, 255, 0, 0.75);
+    width: 0;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite, resetTyping 7s infinite; /* Added resetTyping to restart animation */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(0, 255, 0, 0.75); }
+}
+
+@keyframes resetTyping {
+    0%, 80% { width: 100%; }
+    85%, 100% { width: 0; } /* This resets the width to 0 after a delay */
 }
 
 header h2 {
     font-size: 1.8rem;
-    color: #42449f;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 1);
 }
 
 header p {
     font-size: 1.1rem;
-    margin: 10px 0;
     line-height: 1.6;
 }
 
 /* Navigation styles */
 .navbar {
-    background-color: #2c3e50;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 3;
 }
 
 .navbar ul {
@@ -60,7 +88,7 @@ header p {
 }
 
 .navbar ul li a {
-    color: #ecf0f1;
+    color: #00FF00;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
@@ -68,158 +96,95 @@ header p {
 }
 
 .navbar ul li a:hover {
-    color: #2552c5;
-    text-decoration: underline;
+    color: #33FF33;
 }
 
-/* Container for boxed sections */
-.container {
-    background-color: #ffffff;
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Add borders to individual sections */
+/* Black box styles for better visibility */
 .section-box {
-    border: 2px solid #bdc3c7; /* Light grey border */
-    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.9); /* Black box with slight transparency */
+    border: 2px solid #00FF00; /* Green border for the box */
     padding: 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Subtle neon glow */
 }
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    border-bottom: 3px solid #ecf0f1;
-    padding-bottom: 10px;
+    color: #00FF00;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    border-bottom: 2px solid #00FF00;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Two columns for skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
 }
 
 ul {
-    list-style-type: disc;
+    list-style-type: none;
     padding-left: 20px;
 }
 
 ul li {
     margin-bottom: 10px;
     font-size: 1.1rem;
-    color: #7f8c8d;
     line-height: 1.5;
 }
 
-/* Footer styling */
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #2c3e50;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
-    max-width: 1100px;
-    margin: 20px auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    color: #00FF00;
+    z-index: 2;
 }
 
-footer p {
-    margin: 0;
-    padding: 10px;
-    font-size: 1rem;
-    letter-spacing: 1px;
+/* Profile Picture Shaking */
+@keyframes shaky {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-2px, -2px); }
+    20% { transform: translate(2px, 2px); }
+    30% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    50% { transform: translate(0, 2px); }
+    60% { transform: translate(2px, 0); }
+    70% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    90% { transform: translate(-2px, 0); }
 }
 
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.skill {
-    margin-bottom: 20px;
-}
-
-.skill p {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.percentage {
-    color: #2c3e50;
-    font-weight: bold;
-}
-
-/* Progress Bar */
-.progress {
-    background-color: #ecf0f1;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 12px;
-    margin-top: 5px;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow inside progress bar */
-}
-
-.progress-bar {
-    height: 100%;
-    background-color: #2980b9;
-    border-radius: 5px;
-    transition: width 0.6s ease;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Adds depth to progress bars */
-}
-
-/* Add hover effect on the progress bars */
-.skill:hover .progress-bar {
-    background: linear-gradient(45deg, #48dbfb, #2980b9);
-    width: 100%;
-}
-
-/* Button styles */
-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #3498db;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #2980b9;
-    text-decoration: underline;
-}
-/* Profile Picture Styling */
 .profile-picture-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    animation: shaky 0.5s infinite;
 }
 
 .profile-picture {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Same value as width for perfect circle */
-    border-radius: 50%; /* This makes the image circular */
-    object-fit: cover; /* Ensures the image fits inside the circle */
-    border: 3px solid #2c3e50; /* Optional: Adds a border around the picture */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00FF00;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+}
+
+/* Certificate image styles */
+.cert-image-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.cert-image {
+    width: 40%; /* Reduce the width to 40% for smaller size */
+    max-width: 500px; /* Maximum size if needed */
+    border: 2px solid #00FF00;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
 }

@@ -1,174 +1,135 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansaf Nagori - DevOps Engineer</title>
-    {% load static %}
+    <title>Ansaf Nagori - Hacker Portfolio</title>
     <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation bar -->
+    <canvas id="matrixCanvas"></canvas> <!-- Matrix Background -->
+
     <nav class="navbar">
         <ul>
-            <li><a href="https://github.com/kenichi-07" target="_blank">Projects</a></li>
-            <li><a href="https://www.linkedin.com/in/nagoriansaf/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com/4nsaf/" target="_blank">Instagram</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="https://github.com/kenichi-07" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/nagoriansaf/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/4nsaf/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#contact-section">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1>Hi, I'm Ansaf Nagori</h1>
-            <!-- Add Profile Picture -->
-            <div class="profile-picture-container">
-                <img src="{% static 'portfolio/profile.jpg' %}" alt="Profile Picture" class="profile-picture">
-            </div>
-            <h2>DevOps Engineer</h2>
-            <p>Cloud Infrastructure | CI/CD | Automation</p>
-            <p>
-                I’m a DevOps Engineer with a passion for automating workflows and creating efficient systems. Outside of work, I love to play soccer, chess, travel to new places, click pictures, meet new people, and socialize.
-            </p>
+        <h1>Hi, I'm Ansaf Nagori</h1>
+        <h2 id="dynamic-title">Cloud Engineer</h2>
+        <div class="profile-picture-container">
+            <!--<img src="{% static 'portfolio/profile.jpg' %}" alt="Profile Picture" class="profile-picture"> -->
+            <img id="profile-pic" src="{% static 'portfolio/profile.jpg' %}" alt="Profile Picture" class="profile-picture">
         </div>
+        <p>Learn | Live | Love</p>
+
+        <!-- Hidden elements for image paths -->
+        <input type="hidden" id="profile-img-path" value="{% static 'portfolio/profile.jpg' %}">
+        <input type="hidden" id="anonymous-img-path" value="{% static 'portfolio/anonymous.png' %}">
     </header>
 
-    <!-- Work Experience Section -->
-    <section id="experience">
-        <div class="section-box">
-            <h2>Work Experience</h2>
+    <section id="education" class="section-box">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Master's in Computer Science, Illinois Institute of Technology, Chicago, IL</b></p></h3>
+            <p>Graduation: Jan'23 - Dec'24</p>
+        </div>
 
-            <div class="work-item">
-                <h3>Genpact via Sapientia Cloud Solutions LLP</h3>
-                <p><b>DevOps Engineer</b> (Mar’22 - Jan’23)</p>
+        <div class="education-item">
+            <h3>Bachelor's of Engineering in Computer Science, RGPV University, Bhopal, India</b></p></h3>
+            <p>Graduated: May'20</p>
+        </div>
+    </section>
+    
+    <section id="experience" class="section-box">
+        <h2>Work Experience</h2>
+
+        <div class="work-item">
+            <h3>Cloud Engineer | Genpact via Sapientia Cloud Solutions LLP, Hyderabad, India</h3>
+            <p><b>Mar’22 - Jan’23</b></p>
+            <ul>
+                <li>Designed secure, compliant cloud architectures on AWS for pharmaceutical clients, meeting HIPAA, GDPR, and FDA standards, ensuring data protection and secure access to sensitive information.</li>
+                <li>Automated cloud infrastructure using CloudFormation, reducing operational costs by 70% for R&D platforms.</li>
+                <li>Ensured cloud infrastructure security with continuous monitoring, collaborating with cybersecurity teams to protect sensitive data and mitigate risks.</li>
+                <li>Developed disaster recovery and high-availability solutions for critical applications like clinical trials and supply chain platforms.</li>
+                <li>Streamlined software deployments by automating CI/CD pipelines using Jenkins, GitLab, and Docker.</li>
+            </ul>
+        </div>
+
+        <div class="work-item">
+            <h3>Software Engineer | DXC Technology, Chennai, India</h3>
+            <p><b>Jun’20 - Mar’22</b></p>
+            <ul>
+                <li>Developed scalable data pipelines with Python and Apache Spark to efficiently process large volumes of POS data for P&G and Nestlé.</li>
+                <li>Implemented CI/CD workflows using Azure DevOps, Git, and Bash scripts, automating deployments to Azure.</li>
+                <li>Optimized MySQL databases on Azure for efficient data storage and retrieval, enhancing query performance for real-time analytics.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills" class="section-box">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div>
                 <ul>
-                    <li>Managed cloud infrastructure and CI/CD pipelines for pharmaceutical clients, ensuring security and adherence to SLAs with a 100% success rate.</li>
-                    <li>Reduced storage costs by 70% and time spent on log management by 95% through automation of Kibana logs deletion using AWS Lambda, Python, and AWS SDK (Boto3).</li>
-                    <li>Automated scalable infrastructure deployments using AWS CloudFormation, Jenkins, and GitLab for cloud services such as RDS, S3, DynamoDB, and OpenSearch, reducing manual workload by 90%.</li>
-                    <li>Enhanced cloud security and deployment efficiency through implementation of best CI/CD practices in a multi-environment architecture.</li>
+                    <li><b>Scripting:</b> Python, Bash</li>
+                    <li><b>Cloud Platforms:</b> AWS, GCP</li>
+                    <li><b>Containerization:</b> Docker, Kubernetes</li>
+                    <li><b>CI Tools:</b> Jenkins, GitLab</li>
+                    <li><b>Configuration Management:</b> Ansible</li>
                 </ul>
             </div>
-
-            <div class="work-item">
-                <h3>DXC Technology</h3>
-                <p><b>Software Engineer</b> (Jun’20 - Mar’22)</p>
+            <div>
                 <ul>
-                    <li>Spearheaded a 30% reduction in data processing time for a Nestlé project by optimizing ETL pipelines with Apache Spark’s in-memory processing.</li>
-                    <li>Automated IAM and MariaDB access management using Terraform and Azure SDKs, achieving 95% time efficiency and enhancing compliance with security standards.</li>
-                    <li>Accelerated delivery of data analytics solutions for P&G, increasing project speed by 20-30% by leveraging PySpark on Azure Databricks within Agile frameworks.</li>
+                    <li><b>Infrastructure as Code (IaC):</b> Terraform, CloudFormation</li>
+                    <li><b>Version Control:</b> Git</li>
+                    <li><b>Monitoring & Logging:</b> ELK Stack, Prometheus, Grafana</li>
+                    <li><b>Database Management:</b> MySQL, MariaDB</li>
+                    <li><b>AI/ML Tools:</b> TensorFlow, PyTorch, Pyspark</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-box">
-            <h2>Skills</h2>
+    <section id="projects" class="section-box">
+        <h2>Projects</h2>
+        <ul>
+            <li><b>CI/CD Pipeline Automation:</b> A full DevOps CI/CD pipeline lifecycle using Jenkins, Docker, Kubernetes, Terraform, and Ansible. <a href="https://github.com/kenichi-07/devops-pipeline.git" target="_blank">GitHub</a></li>
+            <li><b>Django Portfolio Website on Google Cloud:</b> Built a Django portfolio website on Google Cloud using Terraform for infrastructure provisioning and continuous deployment. <a href="https://github.com/kenichi-07/portfolio-terraform-gcp/tree/main" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
 
-            <div class="skills-grid">
-                <!-- Left column -->
-                <div class="skill">
-                    <p>TERRAFORM <span class="percentage">90%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>PYTHON & SHELL SCRIPTING <span class="percentage">70%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>DOCKER <span class="percentage">85%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 85%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>JENKINS <span class="percentage">70%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>ANSIBLE <span class="percentage">80%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%;"></div>
-                    </div>
-                </div>
-            
-                <!-- Right column -->
-                <div class="skill">
-                    <p>AWS SERVICES <span class="percentage">80%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>POSTGRESQL, MYSQL, MONGO <span class="percentage">75%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 75%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>KUBERNETES <span class="percentage">70%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>INFRASTRUCTURE AS CODE (IaC) - CLOUDFORMATION <span class="percentage">90%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>MONITORING & LOGGING: ELK STACK, PROMETHEUS <span class="percentage">80%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>DATABASE MANAGEMENT: MYSQL, MARIADB <span class="percentage">85%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 85%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>AI/ML TOOLS: TENSORFLOW, PYTORCH <span class="percentage">75%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 75%;"></div>
-                    </div>
-                </div>
-            
-                <div class="skill">
-                    <p>DEVOPS TOOLS: JIRA, MAVEN <span class="percentage">70%</span></p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
-                    </div>
-                </div>
+    <!--<section id="certification" class="section-box">-->
+    <!--    <h2>Certification</h2>-->
+    <!--    <ul>-->
+    <!--        <li><b>AWS Certified Solutions Architect - Associate (SAA-C03):</b> <a href="https://www.credly.com/badges/51e39644-5fdb-4904-ba61-386c0210a720/public_url" target="_blank">Credly Badge</a></li>-->
+    <!--    </ul>-->
+    <!--    <div class="cert-image-container"></div>-->
+    <!--        <img src="{% static 'portfolio/aws_cert.jpg' %}" alt="AWS Certificate" class="cert-image">-->
+    <!--    </div>-->
+    <!--</section>-->
+
+    <section id="certifications" class="section-box">
+        <h2>Certification</h2>
+        <div class="cert-item">
+            <h3>AWS Certified Solutions Architect - Associate (SAA-C03):</b> <a href="https://www.credly.com/badges/51e39644-5fdb-4904-ba61-386c0210a720/public_url" target="_blank">Credly Badge</a></p>
+            <!-- Display the certificate image -->
+            <div class="cert-image-container">
+                <img src="{% static 'portfolio/aws_cert.jpg' %}" alt="AWS Certificate" class="cert-image">
             </div>
-
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Ansaf Nagori</p>
-        </div>
+        <p>&copy; 2024 Ansaf Nagori</p>
     </footer>
+
+    <script src="{% static 'portfolio/script.js' %}"></script>
 </body>
 </html>
