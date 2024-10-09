@@ -10,3 +10,24 @@ IP address: 127.0.0.1
 "GET /static/portfolio/anonymous.png HTTP/1.1" 304 0
 IP address: 127.0.0.1
 "GET / HTTP/1.1" 200 6797
+Watching for file changes with StatReloader
+/Users/ansafnagori/Documents/Projects/portfolio-terraform-gcp/myportfolio/myportfolio/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/ansafnagori/Documents/Projects/portfolio-terraform-gcp/myportfolio/myportfolio/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/ansafnagori/Documents/Projects/portfolio-terraform-gcp/myportfolio/myportfolio/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/ansafnagori/Documents/Projects/portfolio-terraform-gcp/myportfolio/myportfolio/settings.py changed, reloading.
+Watching for file changes with StatReloader
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6797
+"GET /static/portfolio/style.css HTTP/1.1" 304 0
+"GET /static/portfolio/aws_cert.jpg HTTP/1.1" 304 0
+"GET /static/portfolio/script.js HTTP/1.1" 304 0
