@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',  # Required for authentication
     'django.contrib.messages.middleware.MessageMiddleware',  # Required for messaging in admin
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'myportfolio.middleware.LogIPMiddleware', 
+    'django.myportfolio.middleware.LogIPMiddleware', 
 ]
 
 ROOT_URLCONF = 'myportfolio.urls'
