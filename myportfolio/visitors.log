@@ -40,3 +40,6 @@ IP address: 127.0.0.1
 "GET /static/portfolio/script.js HTTP/1.1" 304 0
 "GET /static/portfolio/aws_cert.jpg HTTP/1.1" 304 0
 "GET /static/portfolio/resume.pdf HTTP/1.1" 200 80754
+Watching for file changes with StatReloader
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6900
