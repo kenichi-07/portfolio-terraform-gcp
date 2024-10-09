@@ -43,12 +43,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Required for session handling
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Required for authentication
+    'django.contrib.messages.middleware.MessageMiddleware',  # Required for messaging in admin
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'myportfolio.middleware.LogIPMiddleware', 
 ]
 
 ROOT_URLCONF = 'myportfolio.urls'
@@ -101,12 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-MIDDLEWARE = [
-    # Your other middleware
-    'myapp.middleware.LogIPMiddleware',  # Add the custom middleware here
-    # Your other middleware
-]
-
 # settings.py
 
 LOGGING = {
@@ -116,7 +111,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'visitors.log',  # You can change the log file name/location
+            'filename': os.path.join(BASE_DIR,'visitors.log'),  # You can change the log file name/location
         },
     },
     'loggers': {
@@ -145,7 +140,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "portfolio/static/portfolio"),]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
