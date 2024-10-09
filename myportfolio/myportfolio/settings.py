@@ -101,6 +101,33 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+MIDDLEWARE = [
+    # Your other middleware
+    'myapp.middleware.LogIPMiddleware',  # Add the custom middleware here
+    # Your other middleware
+]
+
+# settings.py
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': 'visitors.log',  # You can change the log file name/location
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

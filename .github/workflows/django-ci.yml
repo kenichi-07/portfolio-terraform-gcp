@@ -1,27 +1,28 @@
-name: Deploy to GCP EC2
-
-on:
-  push:
-    branches:
-      - main  # Adjust to your branch
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout the code
-      uses: actions/checkout@v2
-
-    - name: Deploy via SSH
-      uses: appleboy/ssh-action@v0.1.2
-      with:
-        host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USER }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        passphrase: ${{ secrets.EC2_PASSPHRASE }}
-        script: |
-          cd /path/to/your/portfolio
-          git pull origin main
-          # Restart web service or apply migrations as needed
-          sudo systemctl restart nginx
+# name: Deploy to GCP EC2
+# 
+# on:
+#   push:
+#     branches:
+#       - main  # Adjust to your branch
+# 
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+# 
+#     steps:
+#     - name: Checkout the code
+#       uses: actions/checkout@v2
+# 
+#     - name: Deploy via SSH
+#       uses: appleboy/ssh-action@v0.1.2
+#       with:
+#         host: ${{ secrets.EC2_HOST }}
+#         username: ${{ secrets.ansafnagori }}
+#         key: ${{ secrets.EC2_SSH_KEY }}
+#         passphrase: ${{ secrets.EC2_PASSPHRASE }}
+#         script: |
+#           cd /path/to/your/portfolio
+#           git pull origin main
+#           # Restart web service or apply migrations as needed
+#           sudo systemctl restart nginx
+# 
