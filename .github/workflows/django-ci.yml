@@ -29,14 +29,14 @@ jobs:
 
     steps:
     - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20.x
+      uses: actions/setup-node #@v3
+      # with:
+      #   node-version: 20.x
 
     - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      uses: actions/setup-python #@v4
+      # with:
+      #   python-version: '3.x'
 
     - name: Install dependencies
       run: |
