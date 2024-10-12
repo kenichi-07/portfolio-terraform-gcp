@@ -1,0 +1,45 @@
+name: GCP Deployment
+
+on:
+  push:
+    branches:
+      - main  # This triggers the action on any push to the 'main' branch
+
+jobs:
+  deploy:
+    name: Deploy to GCP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Authenticate to GCP using service account credentials
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          project_id: YOUR_GCP_PROJECT_ID
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Deploy to GCP VM
+        run: |
+          # Ensure SSH is installed and known hosts is updated
+          sudo apt-get update
+          sudo apt-get install -y ssh
+          
+          # Grant SSH permission to your GCP instance using your private key
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key.pem
+          chmod 600 private_key.pem
+          ssh -o StrictHostKeyChecking=no -i private_key.pem YOUR_GCP_USERNAME@YOUR_GCP_INSTANCE_IP 'bash -s' <<'EOF'
+             # Navigate to the project folder
+             cd /path/to/your/project
+             
+             # Pull the latest changes from the repository
+             git pull origin main
+             
+             # Activate your virtual environment and restart the app
+             source /path/to/your/venv/bin/activate
+             python3 manage.py migrate
+             sudo systemctl restart your-web-service
+          EOF

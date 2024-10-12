@@ -188,3 +188,9 @@ footer {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
 }
+
+.logo {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+}

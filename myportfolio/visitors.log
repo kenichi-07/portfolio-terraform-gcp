@@ -43,3 +43,204 @@ IP address: 127.0.0.1
 Watching for file changes with StatReloader
 IP address: 127.0.0.1
 "GET / HTTP/1.1" 200 6900
+Watching for file changes with StatReloader
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6983
+"GET /static/portfolio/style.css HTTP/1.1" 304 0
+"GET /static/portfolio/script.js HTTP/1.1" 304 0
+"GET /static/portfolio/profile.jpg HTTP/1.1" 304 0
+"GET /static/portfolio/aws_cert.jpg HTTP/1.1" 200 155161
+"GET /static/portfolio/my_logo.png HTTP/1.1" 200 278708
+"GET /static/portfolio/anonymous.png HTTP/1.1" 304 0
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6983
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6891
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 7009
+"GET /static/portfolio/my_logo.png HTTP/1.1" 304 0
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 7085
+"GET /static/portfolio/my_logo.png HTTP/1.1" 304 0
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6967
+Watching for file changes with StatReloader
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6967
+Watching for file changes with StatReloader
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6967
+"GET /static/portfolio/style.css HTTP/1.1" 200 4162
+"GET /static/portfolio/script.js HTTP/1.1" 200 2178
+"GET /static/portfolio/aws_cert.jpg HTTP/1.1" 200 155161
+"GET /static/portfolio/profile.jpg HTTP/1.1" 200 603360
+"GET /static/portfolio/my_logo.png HTTP/1.1" 200 278708
+"GET /static/portfolio/anonymous.png HTTP/1.1" 200 86547
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 6967
+"GET /static/portfolio/style.css HTTP/1.1" 304 0
+"GET /static/portfolio/my_logo.png HTTP/1.1" 200 211266
+- Broken pipe from ('127.0.0.1', 58909)
+- Broken pipe from ('127.0.0.1', 58916)
+- Broken pipe from ('127.0.0.1', 58919)
+- Broken pipe from ('127.0.0.1', 58925)
+- Broken pipe from ('127.0.0.1', 58926)
+- Broken pipe from ('127.0.0.1', 58928)
+- Broken pipe from ('127.0.0.1', 58930)
+- Broken pipe from ('127.0.0.1', 58932)
+- Broken pipe from ('127.0.0.1', 58934)
+- Broken pipe from ('127.0.0.1', 58935)
+- Broken pipe from ('127.0.0.1', 58936)
+- Broken pipe from ('127.0.0.1', 58938)
+- Broken pipe from ('127.0.0.1', 58940)
+- Broken pipe from ('127.0.0.1', 58942)
+- Broken pipe from ('127.0.0.1', 58944)
+- Broken pipe from ('127.0.0.1', 58945)
+- Broken pipe from ('127.0.0.1', 58946)
+- Broken pipe from ('127.0.0.1', 58947)
+- Broken pipe from ('127.0.0.1', 58949)
+- Broken pipe from ('127.0.0.1', 58950)
+- Broken pipe from ('127.0.0.1', 58952)
+- Broken pipe from ('127.0.0.1', 58953)
+- Broken pipe from ('127.0.0.1', 58954)
+- Broken pipe from ('127.0.0.1', 58956)
+- Broken pipe from ('127.0.0.1', 58958)
+- Broken pipe from ('127.0.0.1', 58964)
+- Broken pipe from ('127.0.0.1', 58966)
+- Broken pipe from ('127.0.0.1', 58972)
+- Broken pipe from ('127.0.0.1', 58973)
+- Broken pipe from ('127.0.0.1', 58980)
+- Broken pipe from ('127.0.0.1', 58981)
+- Broken pipe from ('127.0.0.1', 58988)
+- Broken pipe from ('127.0.0.1', 58989)
+- Broken pipe from ('127.0.0.1', 58996)
+- Broken pipe from ('127.0.0.1', 58997)
+- Broken pipe from ('127.0.0.1', 58998)
+- Broken pipe from ('127.0.0.1', 58999)
+- Broken pipe from ('127.0.0.1', 59000)
+- Broken pipe from ('127.0.0.1', 59001)
+- Broken pipe from ('127.0.0.1', 59004)
+- Broken pipe from ('127.0.0.1', 59007)
+- Broken pipe from ('127.0.0.1', 59008)
+- Broken pipe from ('127.0.0.1', 59009)
+- Broken pipe from ('127.0.0.1', 59010)
+- Broken pipe from ('127.0.0.1', 59011)
+- Broken pipe from ('127.0.0.1', 59012)
+- Broken pipe from ('127.0.0.1', 59013)
+- Broken pipe from ('127.0.0.1', 59014)
+- Broken pipe from ('127.0.0.1', 59015)
+- Broken pipe from ('127.0.0.1', 59016)
+- Broken pipe from ('127.0.0.1', 59017)
+- Broken pipe from ('127.0.0.1', 59018)
+- Broken pipe from ('127.0.0.1', 59019)
+- Broken pipe from ('127.0.0.1', 59021)
+- Broken pipe from ('127.0.0.1', 59032)
+- Broken pipe from ('127.0.0.1', 59035)
+- Broken pipe from ('127.0.0.1', 59040)
+- Broken pipe from ('127.0.0.1', 59043)
+- Broken pipe from ('127.0.0.1', 59048)
+- Broken pipe from ('127.0.0.1', 59051)
+- Broken pipe from ('127.0.0.1', 59056)
+- Broken pipe from ('127.0.0.1', 59057)
+- Broken pipe from ('127.0.0.1', 59058)
+- Broken pipe from ('127.0.0.1', 59059)
+- Broken pipe from ('127.0.0.1', 59060)
+- Broken pipe from ('127.0.0.1', 59061)
+- Broken pipe from ('127.0.0.1', 59062)
+- Broken pipe from ('127.0.0.1', 59063)
+- Broken pipe from ('127.0.0.1', 59064)
+- Broken pipe from ('127.0.0.1', 59065)
+- Broken pipe from ('127.0.0.1', 59066)
+- Broken pipe from ('127.0.0.1', 59067)
+- Broken pipe from ('127.0.0.1', 59068)
+- Broken pipe from ('127.0.0.1', 59069)
+- Broken pipe from ('127.0.0.1', 59070)
+- Broken pipe from ('127.0.0.1', 59071)
+- Broken pipe from ('127.0.0.1', 59072)
+- Broken pipe from ('127.0.0.1', 59073)
+- Broken pipe from ('127.0.0.1', 59074)
+- Broken pipe from ('127.0.0.1', 59075)
+- Broken pipe from ('127.0.0.1', 59076)
+- Broken pipe from ('127.0.0.1', 59077)
+- Broken pipe from ('127.0.0.1', 59079)
+- Broken pipe from ('127.0.0.1', 59080)
+- Broken pipe from ('127.0.0.1', 59081)
+- Broken pipe from ('127.0.0.1', 59083)
+- Broken pipe from ('127.0.0.1', 59084)
+- Broken pipe from ('127.0.0.1', 59085)
+- Broken pipe from ('127.0.0.1', 59087)
+- Broken pipe from ('127.0.0.1', 59089)
+- Broken pipe from ('127.0.0.1', 59093)
+- Broken pipe from ('127.0.0.1', 59097)
+- Broken pipe from ('127.0.0.1', 59098)
+- Broken pipe from ('127.0.0.1', 59099)
+- Broken pipe from ('127.0.0.1', 59101)
+- Broken pipe from ('127.0.0.1', 59102)
+- Broken pipe from ('127.0.0.1', 59104)
+- Broken pipe from ('127.0.0.1', 59106)
+- Broken pipe from ('127.0.0.1', 59108)
+- Broken pipe from ('127.0.0.1', 59111)
+- Broken pipe from ('127.0.0.1', 59114)
+- Broken pipe from ('127.0.0.1', 59119)
+- Broken pipe from ('127.0.0.1', 59122)
+- Broken pipe from ('127.0.0.1', 59127)
+- Broken pipe from ('127.0.0.1', 59128)
+- Broken pipe from ('127.0.0.1', 59129)
+- Broken pipe from ('127.0.0.1', 59130)
+- Broken pipe from ('127.0.0.1', 59133)
+- Broken pipe from ('127.0.0.1', 59134)
+- Broken pipe from ('127.0.0.1', 59135)
+"GET /static/portfolio/anonymous.png HTTP/1.1" 200 86547
+- Broken pipe from ('127.0.0.1', 59136)
+- Broken pipe from ('127.0.0.1', 59145)
+- Broken pipe from ('127.0.0.1', 59151)
+- Broken pipe from ('127.0.0.1', 59152)
+- Broken pipe from ('127.0.0.1', 59158)
+- Broken pipe from ('127.0.0.1', 59160)
+- Broken pipe from ('127.0.0.1', 59162)
+- Broken pipe from ('127.0.0.1', 59164)
+- Broken pipe from ('127.0.0.1', 59165)
+- Broken pipe from ('127.0.0.1', 59166)
+- Broken pipe from ('127.0.0.1', 59167)
+- Broken pipe from ('127.0.0.1', 59168)
+- Broken pipe from ('127.0.0.1', 59169)
+- Broken pipe from ('127.0.0.1', 59170)
+- Broken pipe from ('127.0.0.1', 59171)
+- Broken pipe from ('127.0.0.1', 59172)
+- Broken pipe from ('127.0.0.1', 59174)
+- Broken pipe from ('127.0.0.1', 59175)
+- Broken pipe from ('127.0.0.1', 59177)
+- Broken pipe from ('127.0.0.1', 59179)
+- Broken pipe from ('127.0.0.1', 59180)
+- Broken pipe from ('127.0.0.1', 59182)
+- Broken pipe from ('127.0.0.1', 59184)
+- Broken pipe from ('127.0.0.1', 59192)
+- Broken pipe from ('127.0.0.1', 59194)
+- Broken pipe from ('127.0.0.1', 59195)
+- Broken pipe from ('127.0.0.1', 59198)
+"GET /static/portfolio/anonymous.png HTTP/1.1" 200 86547
+- Broken pipe from ('127.0.0.1', 59199)
+- Broken pipe from ('127.0.0.1', 59212)
+- Broken pipe from ('127.0.0.1', 59215)
+- Broken pipe from ('127.0.0.1', 59216)
+"GET /static/portfolio/anonymous.png HTTP/1.1" 200 86547
+- Broken pipe from ('127.0.0.1', 59219)
+"GET /static/portfolio/anonymous.png HTTP/1.1" 200 86547
+"GET /static/portfolio/profile.jpg HTTP/1.1" 304 0
+"GET /static/portfolio/anonymous.png HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 7101
+"GET /static/portfolio/style.css HTTP/1.1" 200 4162
+"GET /static/portfolio/script.js HTTP/1.1" 200 2178
+"GET /static/portfolio/profile.jpg HTTP/1.1" 200 603360
+"GET /static/portfolio/aws_cert.jpg HTTP/1.1" 200 155161
+"GET /static/portfolio/anonymous.png HTTP/1.1" 304 0
+IP address: 127.0.0.1
+Not Found: /apple-touch-icon-precomposed.png
+"GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2762
+IP address: 127.0.0.1
+Not Found: /apple-touch-icon.png
+"GET /apple-touch-icon.png HTTP/1.1" 404 2726
+IP address: 127.0.0.1
+"GET / HTTP/1.1" 200 7101
